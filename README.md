@@ -1,4 +1,34 @@
 # svgd
-codes for paper "SVGD: A VIRTUAL GRADIENTS DESCENT METHOD FOR STOCHASTIC OPTIMIZATION".
+codes for paper "[SVGD: A VIRTUAL GRADIENTS DESCENT METHOD FOR STOCHASTIC OPTIMIZATION](https://arxiv.org/abs/1907.04021)".
 
-Since our code is related to two unpublished papers, we will push the code when the paper is officially submitted. We plan to submit papers in mid-August.
+Generate the library `ops.so`.
+```bash
+svgd/ops/src$ bash builid.sh  # compiling ops.cc & ops.cu.cc
+svgd/ops$ python so_test.py  # test custom ops and kernels
+```
+
+Proof of Lemma 4.1 in paper. (Fig. 7)
+```bash
+svgd/lemma$ python lemma.py  # generate data in svgd/lemma/logs/csv/lemma.csv
+```
+
+Generate training logs in svgd/experiments/logs/csv (Replace `./experiments/src/ops.so` by `./ops/src/ops.so` if necessary.)
+```bash
+# Experiments of multi-layer neural network in paper. (Fig. 9)
+svgd/experiments$ python mlp_sgd.py
+svgd/experiments$ python mlp_rmsprop.py
+svgd/experiments$ python mlp_adam.py
+svgd/experiments$ python mlp_so.py
+
+# Experiments of convolutional neural network in paper. (Fig. 11)
+svgd/experiments$ python vgg_sgd.py
+svgd/experiments$ python vgg_rmsprop.py
+svgd/experiments$ python vgg_adam.py
+svgd/experiments$ python vgg_so.py
+
+# Experiments of deep neural network in paper. (Fig. 12) 
+svgd/experiments$ python resnet_sgd.py
+svgd/experiments$ python resnet_rmsprop.py
+svgd/experiments$ python resnet_adam.py
+svgd/experiments$ python resnet_so.py
+```
