@@ -3,6 +3,8 @@ codes for paper "[SVGD: A VIRTUAL GRADIENTS DESCENT METHOD FOR STOCHASTIC OPTIMI
 
 Generate the library `ops.so`.
 ```bash
+# Environment Required:
+# ubuntu 16.04, cuda-9.0, python 3.5, tensorflow-gpu 1.8.0
 svgd/ops/src$ bash builid.sh  # compiling ops.cc & ops.cu.cc
 svgd/ops$ python so_test.py  # test custom ops and kernels
 ```
