@@ -12,7 +12,7 @@ Proof of Lemma 4.1 in paper. (Fig. 7)
 svgd/lemma$ python lemma.py  # generate data in svgd/lemma/logs/csv/lemma.csv
 ```
 
-Generate training logs in svgd/experiments/logs/csv (Replace `./experiments/src/ops.so` by `./ops/src/ops.so` if necessary.)
+Generate training logs in `svgd/experiments/logs/csv` (Replace `./experiments/src/ops.so` by `./ops/src/ops.so` if necessary.)
 ```bash
 # Experiments of multi-layer neural network in paper. (Fig. 9)
 svgd/experiments$ python mlp_sgd.py
