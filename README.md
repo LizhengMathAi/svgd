@@ -3,8 +3,6 @@
 ## Introduction
 Codes for paper "[SVGD: A VIRTUAL GRADIENTS DESCENT METHOD FOR STOCHASTIC OPTIMIZATION](https://arxiv.org/abs/1907.04021)".
 
-The second encapsulation form(Graph theory algorithm, no need to compile) of [SVGD](https://arxiv.org/abs/1907.04021) will appear in the repository for my next paper as a special case.
-
 ## Compile & Experiments
 Generate the library `ops.so`.
 ```bash
